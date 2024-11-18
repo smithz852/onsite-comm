@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+h4 {
+  margin-left: 2%;
+}
+
+#searchBar {
+  flex: 1;
+  /* margin-top: 1.25em; */
+}
+
+#loginBtnMargin {
+  margin-right: 2%;
+}
+
+.headerFlex {
+  display: flex;
+  align-items: center;
+  height: 5%;
+  width: 100%;
+  background-color: rgb(86, 124, 226);
+}
+
+.headerItemFlex {
+  display: flex;
+  gap: 3%;
+  align-items: center;
+  height: 5%;
+  width: 100%;
+  background-color: rgb(86, 124, 226);
+}
