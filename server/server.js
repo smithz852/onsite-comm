@@ -15,6 +15,7 @@ const server = new ApolloServer({
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async () => {
+  console.log('starting...')
   await server.start();
 
   app.use(express.urlencoded({ extended: false }));

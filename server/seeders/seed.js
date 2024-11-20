@@ -3,7 +3,9 @@ import Categories from '../models/index.js'
 import categorySeeds from './categorySeeds.json' assert { type: 'json' };
 
 db.once('open', async () => {
-  await Categories.create(categorySeeds);
+  await Categories.insertMany(categorySeeds);
+  console.log(categorySeeds)
+  // console.log(db)
   console.log('completed seeding')
   process.exit(0);
 })

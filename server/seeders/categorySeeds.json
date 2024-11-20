@@ -1,18 +1,8 @@
 [
   {
-    "category": "Construction",
-  "subCategory": "Plumbing"
+    "category": "Construction"
   },
   {
-    "category": "Construction",
-  "subCategory": "Electrician"
-  },
-  {
-    "category": "Automotive",
-  "subCategory": "Tires"
-  },
-  {
-    "category": "Automotive",
-  "subCategory": "Suspension"
+    "category": "Automotive"
   }
 ]
