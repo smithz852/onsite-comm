@@ -7,15 +7,16 @@
 }
 
 .categoryPad {
-  padding: 7%;
+  padding: 5%;
 }
 
 .categoryFlex {
   display: flex;
+  gap: 3%;
 }
 
 .tile {
-  padding: 40%;
+  padding: 4%;
   width: 150px;
   background-color: aqua;
   border: gray solid 3px;

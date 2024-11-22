@@ -1,13 +1,13 @@
 import './CategoryPage.css'
 
-export default function CategoryTile() {
+export default function CategoryTile({subCategory}) {
   return (
     <>
-      <div>
+      
         <div className="tile">
-            <p className='centerText'>example</p>
+            <p className='centerText'>{subCategory}</p>
         </div>
-      </div>
+      
     </>
   )
 }
