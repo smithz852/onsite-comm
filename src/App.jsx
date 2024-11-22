@@ -1,13 +1,13 @@
-import Construction from "./component/Construction";
+import CategoryPage from "./component/CategoryPage";
 import Header from "./component/Header";
 
 function App() {
   return (
     <>
-    <div className="flex">
+    
       <Header />
-      <Construction />
-      </div>
+      <CategoryPage />
+    
     </>
   );
 }

@@ -1,0 +1,26 @@
+.categoryPageTitle {
+  padding: 2%;
+}
+
+.placeLeft {
+  justify-content: end;
+}
+
+.categoryPad {
+  padding: 7%;
+}
+
+.categoryFlex {
+  display: flex;
+}
+
+.tile {
+  padding: 40%;
+  width: 150px;
+  background-color: aqua;
+  border: gray solid 3px;
+}
+
+.centerText {
+  text-align: center;
+}
