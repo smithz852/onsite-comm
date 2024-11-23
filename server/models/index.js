@@ -1,3 +1,4 @@
 import Categories from './Categories.js'
+import SubCategories from './SubCategories.js';
 
-export default Categories;
+export  { Categories, SubCategories };
