@@ -26,16 +26,16 @@ const resolvers = {
       }
     }
   },
-  SubCategories: {
-    category: async (parent) => {
-      try {
-        return await Categories.findById(parent.category);
-      } catch (err) {
-        console.error('Error fetching category for subcategory:', err);
-        throw new Error('Failed to fetch category');
-      }
-    }
-  }
+  // SubCategories: {
+  //   category: async (parent) => {
+  //     try {
+  //       return await Categories.findById(parent.category);
+  //     } catch (err) {
+  //       console.error('Error fetching category for subcategory:', err);
+  //       throw new Error('Failed to fetch category');
+  //     }
+  //   }
+  // }
 }
 
 export default resolvers;

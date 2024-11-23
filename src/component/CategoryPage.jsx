@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client';
-import { QUERY_CATEGORIES } from '../utils/queries'
+import { QUERY_SUBCATEGORIES } from '../utils/queries'
 import './CategoryPage.css'
 import CategoryPageSection from "./CategoryPageSection"
 
@@ -7,8 +7,8 @@ import CategoryPageSection from "./CategoryPageSection"
 
 export default function CategoryPage() {
 
-  const { loading, error, data } = useQuery(QUERY_CATEGORIES);
-  const categories = data?.categories || [];
+  const { loading, error, data } = useQuery(QUERY_SUBCATEGORIES);
+  const subcategories = data?.subCategories || [];
   
   if (loading) return <p>Loading...</p>;
   if (error) {
@@ -16,7 +16,7 @@ export default function CategoryPage() {
     return <p>Error loading categories</p>;
   }
   
-  console.log(categories);
+  console.log(subcategories);
   
 
   return (
