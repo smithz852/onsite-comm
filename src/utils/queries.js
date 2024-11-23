@@ -14,9 +14,7 @@ export const QUERY_SUBCATEGORIES = gql`
     _id
     subCategory
     description
-    category {
-      category
-    }
+    category
   }
  }
 `

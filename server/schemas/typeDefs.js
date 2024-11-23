@@ -8,7 +8,7 @@ type SubCategories {
  _id: ID
  subCategory: String
  description: String
- category: Categories
+ category: String
 }
 
 type Query {
