@@ -1,3 +1,4 @@
+
 import './CategoryPage.css'
 import CategoryPageSection from "./CategoryPageSection"
 
@@ -5,7 +6,8 @@ import CategoryPageSection from "./CategoryPageSection"
 
 export default function CategoryPage() {
 
- 
+  
+  
 
   return (
     <>
@@ -13,10 +15,10 @@ export default function CategoryPage() {
     <h1 className="categoryPageTitle">Categories</h1>
     </div>
     <div className='categoryPad'>
-     <CategoryPageSection title='Construction'/>
+     <CategoryPageSection title='Construction' />
      </div>
      <div className='categoryPad'>
-     <CategoryPageSection title='Automotive'/>
+     <CategoryPageSection title='Automotive' />
      </div>
     </>
   )

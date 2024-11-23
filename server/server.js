@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import express from 'express';
+import cors from 'cors'
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import path from 'path';
@@ -8,6 +9,12 @@ import { typeDefs, resolvers } from './schemas/index.js';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+//Will need to correct this later to not allow all access
+app.use(cors({
+    origin: '*',
+    credentials: true
+}));
 
 const server = new ApolloServer({
     typeDefs,

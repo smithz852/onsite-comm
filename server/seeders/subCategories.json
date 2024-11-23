@@ -2,41 +2,41 @@
   {
     "subCategory": "Communications",
     "description": "Phone and server setups for homes and buisinesses",
-    "category": "673e9c243f41510d049504e2"
+    "category": "Construction"
   },
   {
     "subCategory": "Plumbing",
     "description": "Bathroom, kitchen, and general waterflow for homes",
-    "category": "673e9c243f41510d049504e1"
+    "category": "Construction"
   },
   {
     "subCategory": "Electrician",
     "description": "Home, lighting, power needs, and general wiring",
-    "category": "673e9c243f41510d049504e1"
+    "category": "Construction"
   },
   {
     "subCategory": "Carpentry",
     "description": "Home woodwork and light construction for home improvments",
-    "category": "673e9c243f41510d049504e1"
+    "category": "Construction"
   },
   {
     "subCategory": "Tires",
     "description": "General work with patches or tire replacments",
-    "category": "673e9c243f41510d049504e2"
+    "category": "Automotive"
   },
   {
     "subCategory": "Brakes",
     "description": "Vehicle brake work and tips for repairs",
-    "category": "673e9c243f41510d049504e2"
+    "category": "Automotive"
   },
   {
     "subCategory": "Suspension",
     "description": "Vehcile suspention practices and projects",
-    "category": "673e9c243f41510d049504e2"
+    "category": "Automotive"
   },
   {
     "subCategory": "Shocks",
     "description": "Shocks and strut work, recommendations, and best practices",
-    "category": "673e9c243f41510d049504e2"
+    "category": "Automotive"
   }
 ]
