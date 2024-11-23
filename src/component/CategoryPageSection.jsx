@@ -25,10 +25,12 @@ export default function CategoryPageSection({title}) {
          <CategoryTile subCategory={name}/>
          <CategoryTile subCategory={name}/>
          <CategoryTile subCategory={name}/> */}
-      {subcategories.map((subCategory) => (
-        
-        <CategoryTile subCategory={subCategory.subCategory} key={subCategory._id}/>
-      ))}
+      {subcategories.map((subCategory) => {
+        if (subCategory.category === title) {
+          return <CategoryTile subCategory={subCategory.subCategory} key={subCategory._id}/>
+        }
+      } 
+      )}
      </div>
     </>
   )
