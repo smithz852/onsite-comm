@@ -31,9 +31,6 @@ export default function CategoryPage() {
       </div> 
       )
     })}
-     {/* <div className='categoryPad'>
-     <CategoryPageSection title='Automotive' />
-     </div> */}
     </>
   )
 }

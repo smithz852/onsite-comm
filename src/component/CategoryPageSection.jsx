@@ -16,18 +16,24 @@ export default function CategoryPageSection({title}) {
   
   console.log(subcategories);
 
+  function handleTileClick(subCateogry) {
+    console.log('click category', subCateogry)
+    
+    subcategories.forEach((el) => {
+      if (el.subCategory === subCateogry) {
+        console.log('found', el.description)
+      }
+    })
+  }
+
 
   return (
     <>
      <h2>{title}</h2>
      <div className="categoryFlex">
-         {/* <CategoryTile subCategory={name}/>
-         <CategoryTile subCategory={name}/>
-         <CategoryTile subCategory={name}/>
-         <CategoryTile subCategory={name}/> */}
       {subcategories.map((subCategory) => {
         if (subCategory.category === title) {
-          return <CategoryTile subCategory={subCategory.subCategory} key={subCategory._id}/>
+          return <CategoryTile subCategory={subCategory.subCategory} key={subCategory._id} onSelect={handleTileClick}/>
         }
       } 
       )}
