@@ -1,7 +1,7 @@
 const typeDefs = `
 type Categories {
   _id: ID
-  category: String
+  categories: String
 }
 
 type SubCategories {
