@@ -60,4 +60,5 @@
 .bigDisplayContainer {
   background-color: aqua;
   border: solid gray 3px;
+  margin: 5%;
 }

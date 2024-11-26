@@ -14,10 +14,8 @@ export default function BigSubCategory({ categoryInfo }) {
       <p>{categoryInfo.description}</p>
       </section>
       <div className='bigDisplayBtnFlex'>
-      
         <button className='bigDisplayBtns'>Explore</button>
         <button className='bigDisplayBtns'>Post</button>
-      
       </div>
       </div>
     </>
