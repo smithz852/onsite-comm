@@ -1,5 +1,5 @@
-import { useQuery } from '@apollo/client';
-import { QUERY_CATEGORIES } from '../utils/queries'
+import { useContext } from 'react';
+import { FetchContext } from '../store/fetch-context';
 import './CategoryPage.css'
 import CategoryPageSection from "./CategoryPageSection"
 import { useState } from 'react';
@@ -10,14 +10,7 @@ export default function CategoryPage() {
 
   const [bigDisplay, setBigDisplay] = useState(false)
 
-  const { loading, error, data } = useQuery(QUERY_CATEGORIES);
-  const categories = data?.categories || [];
-  if (loading) return <p>Loading...</p>;
-  if (error) {
-    console.error('Error fetching categories:', error);
-    return <p>Error loading categories</p>;
-  }
-  console.log(categories);
+  const { categories, loading, error } = useContext(FetchContext)
   
   
 
