@@ -18,7 +18,11 @@ export default function CategoryPage() {
     
     subcategories.forEach((el) => {
       if (el.subCategory === subCateogry) {
-        console.log('found', el.description)
+        console.log('descr: ', el.description)
+        setBigDisplay({
+          selectedCategory: subCateogry,
+          description: el.description
+        })
       }
     })
   }
@@ -28,8 +32,9 @@ export default function CategoryPage() {
     <>
     <div className='flex'>
     <h1 className="categoryPageTitle">Categories</h1>
+    {bigDisplay && <BigSubCategory categoryInfo={bigDisplay}/>}
     </div>
-    {bigDisplay && <BigSubCategory categoryInfo={subcategories}/>}
+   
     {!bigDisplay && categories.map((category) => {
       console.log("id", category._id)
       return (
