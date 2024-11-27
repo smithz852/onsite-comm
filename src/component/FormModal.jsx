@@ -1,7 +1,7 @@
 import "./FormModal.css";
 import FormInput from "./FormInput";
 
-export default function FormModal({ onClose }) {
+export default function FormModal({ onClose, subcategory }) {
   function handleSubmit(event) {
     event.preventDefault();
     console.log("form submitted");
@@ -15,8 +15,8 @@ export default function FormModal({ onClose }) {
     <>
       <div className="modal-overlay" onClick={handleClose}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          <h1 className="modal-main-header">Main Header</h1>
-          <h2 className="modal-sub-header">Smaller Header</h2>
+          <h1 className="modal-main-header">Create A Post</h1>
+          <h2 className="modal-sub-header">{subcategory}</h2>
           <div className="modal-input-container">
             <form onSubmit={handleSubmit}>
               <div>

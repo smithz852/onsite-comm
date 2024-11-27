@@ -16,7 +16,7 @@ function handleClick() {
 
   return (
     <>
-    {showModal && <FormModal onClose={handleModal}/>}
+    {showModal && <FormModal onClose={handleModal} subcategory={categoryInfo.selectedCategory}/>}
     <div className='bigDisplayContainer'>
       <div className='xBtn'>
         <button onClick={handleClick}><span className='xFont'>X</span></button>
