@@ -1,11 +1,16 @@
 import './CategoryPage.css'
 
-export default function BigSubCategory({ categoryInfo }) {
+export default function BigSubCategory({ categoryInfo, xClick }) {
+  
+function handleClick() {
+  xClick()
+}
+
   return (
     <>
     <div className='bigDisplayContainer'>
       <div className='xBtn'>
-        <button><span className='xFont'>X</span></button>
+        <button onClick={handleClick}><span className='xFont'>X</span></button>
       </div>
       <section className='bigDisplayHeader'>
       <p>{categoryInfo.selectedCategory}</p>

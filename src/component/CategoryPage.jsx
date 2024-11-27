@@ -26,13 +26,17 @@ export default function CategoryPage() {
       }
     })
   }
+
+  function handleXclick() {
+    setBigDisplay(false)
+  }
   
 
   return (
     <>
     <div className='flex'>
     <h1 className="categoryPageTitle">Categories</h1>
-    {bigDisplay && <BigSubCategory categoryInfo={bigDisplay}/>}
+    {bigDisplay && <BigSubCategory categoryInfo={bigDisplay} xClick={handleXclick}/>}
     </div>
    
     {!bigDisplay && categories.map((category) => {
