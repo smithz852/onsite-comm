@@ -12,6 +12,11 @@ export const FetchContext = createContext({
 });
 
 export function FetchContextProvider({ children }) {
+const [formOpen, setFormOpen] = useState(false)
+
+
+
+
   // Categories query
   const { 
     loading: categoriesLoading, 

@@ -1,6 +1,14 @@
+import { useState } from 'react'
+import FormModal from './FormModal'
 import './CategoryPage.css'
 
 export default function BigSubCategory({ categoryInfo, xClick }) {
+
+  const [showModal, setShowModal] = useState(false)
+
+  function handleModal(isShowing) {
+     setShowModal(isShowing)
+  }
   
 function handleClick() {
   xClick()
@@ -8,6 +16,7 @@ function handleClick() {
 
   return (
     <>
+    {showModal && <FormModal onClose={handleModal}/>}
     <div className='bigDisplayContainer'>
       <div className='xBtn'>
         <button onClick={handleClick}><span className='xFont'>X</span></button>
@@ -20,7 +29,7 @@ function handleClick() {
       </section>
       <div className='bigDisplayBtnFlex'>
         <button className='bigDisplayBtns'>Explore</button>
-        <button className='bigDisplayBtns'>Post</button>
+        <button className='bigDisplayBtns' onClick={() => handleModal(true)}>Post</button>
       </div>
       </div>
     </>
