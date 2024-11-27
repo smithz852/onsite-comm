@@ -45,15 +45,6 @@
   margin: 20px 0;
 }
 
-/* Input box styles */
-.modal-input {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
-}
-
 /* Footer for buttons */
 .modal-footer {
   display: flex;
