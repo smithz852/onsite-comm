@@ -1,0 +1,75 @@
+/* Overlay for modal background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+/* Main header styles */
+.modal-main-header {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Sub-header styles */
+.modal-sub-header {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Input container */
+.modal-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Input box styles */
+.modal-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Footer for buttons */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button styles */
+.modal-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #0056b3;
+}
