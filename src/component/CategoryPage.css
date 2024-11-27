@@ -25,3 +25,40 @@
 .centerText {
   text-align: center;
 }
+
+.xBtn {
+  text-align: end;
+  margin: 2%;
+}
+
+.xFont {
+  font-size: 15pt;
+  padding: 5%;
+}
+
+.bigDisplayHeader {
+  text-align: center;
+  font-size: 40pt;
+}
+
+.bigDisplayBtnFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bigDisplayDescr {
+  font-size: 20pt;
+  padding: 3%;
+}
+
+.bigDisplayBtns {
+  font-size: 15pt;
+  padding: 1%;
+  margin: 3%;
+}
+
+.bigDisplayContainer {
+  background-color: aqua;
+  border: solid gray 3px;
+  margin: 5%;
+}
