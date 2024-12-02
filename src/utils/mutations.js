@@ -11,5 +11,3 @@ export const ADD_POST = gql`
     }
   }
 `
-export const ADD_CATEGORY = gql`
-`

@@ -1,7 +1,12 @@
+import { useMutation } from "@apollo/client";
+import { ADD_POST } from "../utils/mutations";
 import "./FormModal.css";
 import FormInput from "./FormInput";
 
-export default function FormModal({ onClose, subcategory }) {
+export default function FormModal({ onClose, subcategory, category }) {
+
+const [addPost, { error }] = useMutation(ADD_POST);
+
   function handleSubmit(event) {
     event.preventDefault();
     const fd = new FormData(event.target);
@@ -10,6 +15,20 @@ export default function FormModal({ onClose, subcategory }) {
     entryData.aquisition = aquisitionData
     console.log(entryData);
     console.log("form submitted");
+
+    try {
+      const { data } = addPost({
+        variables: {
+          title: entryData["post-title"],
+          description: entryData["post-descr"],
+          subCategory: subcategory,
+          category: category
+        }
+      })
+    } catch (error) {
+      console.error(error);
+    }
+
   }
 
   function handleClose() {
