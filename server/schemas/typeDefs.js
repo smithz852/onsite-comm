@@ -11,9 +11,22 @@ type SubCategories {
  category: String
 }
 
+type Post {
+ _id: ID
+ title: String
+ description: String
+ subCategory: String
+ category: String
+}
+
 type Query {
  categories: [Categories]
  subCategories: [SubCategories]
+ posts: [Post]
+}
+
+type Mutation {
+ addPost(title: String!, description: String!, subCategory: String!, category: String!): Post
 }
 
 `;

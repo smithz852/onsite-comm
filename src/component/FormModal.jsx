@@ -4,6 +4,11 @@ import FormInput from "./FormInput";
 export default function FormModal({ onClose, subcategory }) {
   function handleSubmit(event) {
     event.preventDefault();
+    const fd = new FormData(event.target);
+    const aquisitionData = fd.getAll('aquisition')
+    const entryData = Object.fromEntries(fd.entries())
+    entryData.aquisition = aquisitionData
+    console.log(entryData);
     console.log("form submitted");
   }
 
@@ -25,14 +30,14 @@ export default function FormModal({ onClose, subcategory }) {
                   label="Post Title"
                   inputType="text"
                   name="post-title"
-                  // value={null}
+                  
                 />
                 <FormInput
                   id="post-descr"
                   label="Post Description"
                   inputType="text"
                   name="post-descr"
-                  // value={null}
+                  
                 />
               </div>
               <div>
