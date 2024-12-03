@@ -8,13 +8,19 @@ export const FetchContext = createContext({
   categoriesLoading: false,
   subcategoriesLoading: false,
   categoriesError: null,
-  subcategoriesError: null
+  subcategoriesError: null,
+  handleModal: () => {},
+  showModal: false
 });
 
 export function FetchContextProvider({ children }) {
 const [formOpen, setFormOpen] = useState(false)
 
+const [showModal, setShowModal] = useState(false)
 
+  function handleModal(isShowing) {
+     setShowModal(isShowing)
+  }
 
 
   // Categories query
@@ -40,7 +46,9 @@ const [formOpen, setFormOpen] = useState(false)
     categoriesLoading,
     subcategoriesLoading,
     categoriesError,
-    subcategoriesError
+    subcategoriesError,
+    handleModal,
+    showModal
   };
 
   return (

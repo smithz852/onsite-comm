@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import FormModal from './FormModal'
+import { useContext } from 'react';
+import { FetchContext } from '../store/fetch-context';
 import './CategoryPage.css'
 
 export default function BigSubCategory({ categoryInfo, xClick }) {
 
-  const [showModal, setShowModal] = useState(false)
+ const { showModal, handleModal } = useContext(FetchContext);
 
-  function handleModal(isShowing) {
-     setShowModal(isShowing)
-  }
   
 function handleClick() {
   xClick()
