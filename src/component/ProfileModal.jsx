@@ -16,11 +16,13 @@ export default function ProfileModal({onClose}) {
         <button onClick={handleClose}><span className='xFont'>X</span></button>
       </div>
           <h1 className="modal-main-header">Post Summary</h1>
-          <div>
+          <div className='modal-flex'>
+          <div className='content-box'>
           <h2 className="modal-sub-header">Post Title</h2>
-          <h4>Category: subcategory</h4>
+          <h4 className='profilePostDesc'>Category: subcategory</h4>
           </div>
-          <div><button>Delete</button></div>
+          <div className='postDeleteBtn'><button>Delete</button></div>
+          </div>
         </div>
       </div>
     </>
