@@ -1,8 +1,14 @@
+import { useContext } from 'react';
+import { FetchContext } from '../store/fetch-context';
 import './FormModal.css'
 import './CategoryPage.css'
 
 
 export default function ProfileModal({onClose}) {
+
+  //Need to add get request for post data next...
+  const { postData } = useContext(FetchContext)
+  console.log('postData', postData)
 
   function handleClose() {
     onClose(false)

@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { useQuery } from '@apollo/client';
-import { QUERY_SUBCATEGORIES, QUERY_CATEGORIES } from '../utils/queries';
+import { QUERY_SUBCATEGORIES, QUERY_CATEGORIES, QUERY_POSTS } from '../utils/queries';
 
 export const FetchContext = createContext({
   categories: [],
@@ -9,6 +9,9 @@ export const FetchContext = createContext({
   subcategoriesLoading: false,
   categoriesError: null,
   subcategoriesError: null,
+  postData: [],
+  postLoading: false,
+  postError: null,
   handleModal: () => {},
   showModal: false
 });
@@ -37,6 +40,12 @@ const [showModal, setShowModal] = useState(false)
     data: subcategoriesData 
   } = useQuery(QUERY_SUBCATEGORIES);
 
+  const {
+    loading: postLoading,
+    error: postError,
+    data: postData
+  } = useQuery(QUERY_POSTS)
+
   const categories = categoriesData?.categories || [];
   const subcategories = subcategoriesData?.subCategories || [];
 
@@ -47,13 +56,16 @@ const [showModal, setShowModal] = useState(false)
     subcategoriesLoading,
     categoriesError,
     subcategoriesError,
+    postData,
+    postLoading,
+    postError,
     handleModal,
     showModal
   };
 
   return (
     <FetchContext.Provider value={contextValue}>
-      {(categoriesLoading || subcategoriesLoading) ? (
+      {(categoriesLoading || subcategoriesLoading || postLoading) ? (
         <p>Loading...</p>
       ) : children}
     </FetchContext.Provider>
