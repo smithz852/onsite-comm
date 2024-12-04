@@ -27,6 +27,7 @@ type Query {
 
 type Mutation {
  addPost(title: String!, description: String!, subCategory: String!, category: String!): Post
+ deletePost(_id: ID!): Post
 }
 
 `;
