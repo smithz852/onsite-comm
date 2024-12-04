@@ -28,7 +28,7 @@ const [addPost, { error }] = useMutation(ADD_POST);
     } catch (error) {
       console.error(error);
     }
-
+    handleClose()
   }
 
   function handleClose() {
