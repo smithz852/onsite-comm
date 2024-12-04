@@ -18,10 +18,12 @@ export default function CategoryPage() {
     
     subcategories.forEach((el) => {
       if (el.subCategory === subCateogry) {
+        console.log('el', el)
         console.log('descr: ', el.description)
         setBigDisplay({
           selectedCategory: subCateogry,
-          description: el.description
+          description: el.description,
+          category: el.category
         })
       }
     })

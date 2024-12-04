@@ -1,10 +1,34 @@
+import { useMutation } from "@apollo/client";
+import { ADD_POST } from "../utils/mutations";
 import "./FormModal.css";
 import FormInput from "./FormInput";
 
-export default function FormModal({ onClose }) {
+export default function FormModal({ onClose, subcategory, category }) {
+
+const [addPost, { error }] = useMutation(ADD_POST);
+
   function handleSubmit(event) {
     event.preventDefault();
+    const fd = new FormData(event.target);
+    const aquisitionData = fd.getAll('aquisition')
+    const entryData = Object.fromEntries(fd.entries())
+    entryData.aquisition = aquisitionData
+    console.log(entryData);
     console.log("form submitted");
+
+    try {
+      const { data } = addPost({
+        variables: {
+          title: entryData["post-title"],
+          description: entryData["post-descr"],
+          subCategory: subcategory,
+          category: category
+        }
+      })
+    } catch (error) {
+      console.error(error);
+    }
+    handleClose()
   }
 
   function handleClose() {
@@ -15,8 +39,8 @@ export default function FormModal({ onClose }) {
     <>
       <div className="modal-overlay" onClick={handleClose}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          <h1 className="modal-main-header">Main Header</h1>
-          <h2 className="modal-sub-header">Smaller Header</h2>
+          <h1 className="modal-main-header">Create A Post</h1>
+          <h2 className="modal-sub-header">{subcategory}</h2>
           <div className="modal-input-container">
             <form onSubmit={handleSubmit}>
               <div>
@@ -25,14 +49,14 @@ export default function FormModal({ onClose }) {
                   label="Post Title"
                   inputType="text"
                   name="post-title"
-                  // value={null}
+                  
                 />
                 <FormInput
                   id="post-descr"
                   label="Post Description"
                   inputType="text"
                   name="post-descr"
-                  // value={null}
+                  
                 />
               </div>
               <div>

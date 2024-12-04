@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { useQuery } from '@apollo/client';
-import { QUERY_SUBCATEGORIES, QUERY_CATEGORIES } from '../utils/queries';
+import { QUERY_SUBCATEGORIES, QUERY_CATEGORIES, QUERY_POSTS } from '../utils/queries';
 
 export const FetchContext = createContext({
   categories: [],
@@ -8,13 +8,22 @@ export const FetchContext = createContext({
   categoriesLoading: false,
   subcategoriesLoading: false,
   categoriesError: null,
-  subcategoriesError: null
+  subcategoriesError: null,
+  postData: [],
+  postLoading: false,
+  postError: null,
+  handleModal: () => {},
+  showModal: false
 });
 
 export function FetchContextProvider({ children }) {
 const [formOpen, setFormOpen] = useState(false)
 
+const [showModal, setShowModal] = useState(false)
 
+  function handleModal(isShowing) {
+     setShowModal(isShowing)
+  }
 
 
   // Categories query
@@ -31,6 +40,13 @@ const [formOpen, setFormOpen] = useState(false)
     data: subcategoriesData 
   } = useQuery(QUERY_SUBCATEGORIES);
 
+  const {
+    loading: postLoading,
+    error: postError,
+    data: postData,
+    refetch: refetchPosts
+  } = useQuery(QUERY_POSTS)
+
   const categories = categoriesData?.categories || [];
   const subcategories = subcategoriesData?.subCategories || [];
 
@@ -40,12 +56,18 @@ const [formOpen, setFormOpen] = useState(false)
     categoriesLoading,
     subcategoriesLoading,
     categoriesError,
-    subcategoriesError
+    subcategoriesError,
+    postData,
+    postLoading,
+    postError,
+    handleModal,
+    showModal,
+    refetchPosts
   };
 
   return (
     <FetchContext.Provider value={contextValue}>
-      {(categoriesLoading || subcategoriesLoading) ? (
+      {(categoriesLoading || subcategoriesLoading || postLoading) ? (
         <p>Loading...</p>
       ) : children}
     </FetchContext.Provider>

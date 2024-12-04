@@ -1,3 +1,4 @@
+
 /* Overlay for modal background */
 .modal-overlay {
   position: fixed;
@@ -6,6 +7,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +25,27 @@
   text-align: center;
 }
 
+.content-box {
+  text-align: start;
+  border: gray solid 2px;
+  margin: 2%;
+  flex-grow: 3;
+}
+
+.modal-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.postDeleteBtn {
+  align-self: center;
+}
+
+.profilePostDesc {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
 /* Main header styles */
 .modal-main-header {
   margin: 0;
@@ -32,7 +55,7 @@
 
 /* Sub-header styles */
 .modal-sub-header {
-  margin: 10px 0;
+  margin: 5px;
   font-size: 1.2rem;
   color: #666;
 }

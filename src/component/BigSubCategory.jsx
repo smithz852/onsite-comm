@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import FormModal from './FormModal'
+import { useContext } from 'react';
+import { FetchContext } from '../store/fetch-context';
 import './CategoryPage.css'
 
 export default function BigSubCategory({ categoryInfo, xClick }) {
 
-  const [showModal, setShowModal] = useState(false)
+ const { showModal, handleModal } = useContext(FetchContext);
 
-  function handleModal(isShowing) {
-     setShowModal(isShowing)
-  }
   
 function handleClick() {
   xClick()
@@ -16,7 +15,7 @@ function handleClick() {
 
   return (
     <>
-    {showModal && <FormModal onClose={handleModal}/>}
+    {showModal && <FormModal onClose={handleModal} subcategory={categoryInfo.selectedCategory} category={categoryInfo.category}/>}
     <div className='bigDisplayContainer'>
       <div className='xBtn'>
         <button onClick={handleClick}><span className='xFont'>X</span></button>

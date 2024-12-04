@@ -18,3 +18,14 @@ export const QUERY_SUBCATEGORIES = gql`
   }
  }
 `
+export const QUERY_POSTS = gql`
+  query getPosts {
+    posts {
+      _id
+      title
+      description
+      category
+      subCategory
+    }
+  }
+`
