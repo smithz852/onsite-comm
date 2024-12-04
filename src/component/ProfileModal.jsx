@@ -1,11 +1,15 @@
 import { useContext, useState, useEffect } from 'react';
 import { FetchContext } from '../store/fetch-context';
+import { useMutation } from "@apollo/client";
+import { DELETE_POST } from "../utils/mutations";
 import './FormModal.css'
 import './CategoryPage.css'
 
 
 export default function ProfileModal({onClose}) {
   const [fetched, setFetched] = useState()
+
+  const [deletePost, { error }] = useMutation(DELETE_POST)
 
   const { postData, refetchPosts } = useContext(FetchContext)
   console.log('postData', postData.posts)
@@ -23,6 +27,18 @@ export default function ProfileModal({onClose}) {
 
   function handleDelete(event) {
     console.log(event.target.value)
+    let id = event.target.value
+    try {
+      const { data } = deletePost({
+        variables: {
+          _id: id
+        }
+      })
+      console.log(data)
+    } catch (err) {
+      console.error(err)
+    }
+  setFetched(false)
   }
 
   return (
@@ -34,7 +50,6 @@ export default function ProfileModal({onClose}) {
       </div>
           <h1 className="modal-main-header">Post Summary</h1>
           {posts.map((post) => {
-            
             return (
             <div className='modal-flex' id={post._id}>
           <div className='content-box'>
