@@ -1,18 +1,25 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { FetchContext } from '../store/fetch-context';
 import './FormModal.css'
 import './CategoryPage.css'
 
 
 export default function ProfileModal({onClose}) {
+  const [fetched, setFetched] = useState()
 
   //Need to add get request for post data next...
-  const { postData } = useContext(FetchContext)
+  const { postData, refetchPosts } = useContext(FetchContext)
   console.log('postData', postData.posts)
   const posts = postData.posts
 
+  useEffect(() => {
+    setFetched(true)
+    refetchPosts()
+  }, [fetched])
+
   function handleClose() {
     onClose(false)
+    setFetched(false)
   }
 
   return (

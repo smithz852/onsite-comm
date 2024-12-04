@@ -43,7 +43,8 @@ const [showModal, setShowModal] = useState(false)
   const {
     loading: postLoading,
     error: postError,
-    data: postData
+    data: postData,
+    refetch: refetchPosts
   } = useQuery(QUERY_POSTS)
 
   const categories = categoriesData?.categories || [];
@@ -60,7 +61,8 @@ const [showModal, setShowModal] = useState(false)
     postLoading,
     postError,
     handleModal,
-    showModal
+    showModal,
+    refetchPosts
   };
 
   return (
