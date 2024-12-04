@@ -8,7 +8,8 @@ export default function ProfileModal({onClose}) {
 
   //Need to add get request for post data next...
   const { postData } = useContext(FetchContext)
-  console.log('postData', postData)
+  console.log('postData', postData.posts)
+  const posts = postData.posts
 
   function handleClose() {
     onClose(false)
@@ -22,13 +23,18 @@ export default function ProfileModal({onClose}) {
         <button onClick={handleClose}><span className='xFont'>X</span></button>
       </div>
           <h1 className="modal-main-header">Post Summary</h1>
-          <div className='modal-flex'>
+          {posts.map((post) => {
+            return (
+            <div className='modal-flex'>
           <div className='content-box'>
-          <h2 className="modal-sub-header">Post Title</h2>
-          <h4 className='profilePostDesc'>Category: subcategory</h4>
+          <h2 className="modal-sub-header">{post.title}</h2>
+          <h4 className='profilePostDesc'>{post.category}: {post.subCategory}</h4>
           </div>
           <div className='postDeleteBtn'><button>Delete</button></div>
           </div>
+            )
+           }
+          )}
         </div>
       </div>
     </>
