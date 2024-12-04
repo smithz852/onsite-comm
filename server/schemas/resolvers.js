@@ -46,6 +46,16 @@ const resolvers = {
         console.error('Error creating post:', err);
         throw new Error('Failed to create post');
       }
+    },
+    deletePost: async (parent, { _id }, context) => {
+      try {
+        const post = await Post.findByIdAndDelete(_id);
+        console.log('Post deleted:', post);
+        return post;
+      } catch (err) {
+        console.error('Error deleting post:', err);
+        throw new Error('Failed to delete post');
+      }
     }
   }
 }
