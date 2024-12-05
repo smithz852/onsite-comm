@@ -18,7 +18,7 @@
 
 .categoryFlex {
   display: flex;
-  gap: 5%;
+  gap: 4%;
 }
 
 .sectionTitle {
@@ -27,14 +27,22 @@
 
 .tile {
   padding: 3%;
-  width: 200px;
+  width: 225px;
   background-color: aqua;
   border: gray solid 3px;
+  border-radius: 9px 9px 9px 9px;
+}
+
+.tile:hover {
+  background-color: rgb(83, 216, 216);
+  cursor: pointer;
 }
 
 .centerText {
   text-align: center;
-  font-size: 20pt;
+  font-size: 23pt;
+  font-weight: 600;
+  color: rgb(82, 78, 78);
 }
 
 .xBtn {
