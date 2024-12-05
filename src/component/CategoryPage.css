@@ -63,8 +63,15 @@ p {
 }
 
 .xFont {
-  font-size: 15pt;
-  padding: 5%;
+  font-size: 20pt;
+  padding: 1%;
+  color: rgb(20, 8, 14);
+  font-weight: 700;
+}
+
+.xFont:hover {
+  color: rgb(88, 88, 88);
+  cursor: pointer;
 }
 
 .bigDisplayHeader {
@@ -74,7 +81,7 @@ p {
 
 .bigDisplayBtnFlex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .bigDisplayDescr {
@@ -85,14 +92,23 @@ p {
 }
 
 .bigDisplayBtns {
-  font-size: 15pt;
+  font-size: 20pt;
   padding: 1%;
   margin: 1%;
+  background-color: rgb(236, 220, 176);
+  border: solid 3px rgb(102, 107, 106);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.bigDisplayBtns:hover {
+  background-color: rgb(243, 210, 119);
+  cursor: pointer;
 }
 
 .bigDisplayContainer {
-  background-color: rgb(202, 247, 247);
+  background-color: rgb(178, 221, 247);
   border: solid gray 3px;
   margin: 1%;
+  border-radius: 10px 10px 10px 10px;
   /* padding: 5%; */
 }

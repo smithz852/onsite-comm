@@ -20,7 +20,7 @@ function handleClick() {
     <div className='bigDisplayContainer'>
       
       <div className='xBtn'>
-        <button onClick={handleClick}><span className='xFont'>X</span></button>
+        <span className='xFont' onClick={handleClick}>X</span>
       </div>
       <section className='bigDisplayHeader'>
       <p>{categoryInfo.selectedCategory}</p>

@@ -1,3 +1,7 @@
+* {
+  color: rgb(20, 8, 14);
+}
+
 .flex {
   display: flex;
   flex-direction: column;
