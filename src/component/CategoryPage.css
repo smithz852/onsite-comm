@@ -46,7 +46,7 @@ p {
 }
 
 .tile:hover {
-  background-color: rgb(83, 216, 216);
+  opacity: 75%;
   cursor: pointer;
 }
 
@@ -54,7 +54,7 @@ p {
   text-align: center;
   font-size: 23pt;
   font-weight: 600;
-  color: rgb(82, 78, 78);
+  color: rgb(226, 226, 226);
 }
 
 .xBtn {
