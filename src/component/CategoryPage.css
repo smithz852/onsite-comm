@@ -21,15 +21,20 @@
   gap: 5%;
 }
 
+.sectionTitle {
+  font-size: 25pt;
+}
+
 .tile {
-  padding: 4%;
-  width: 150px;
+  padding: 3%;
+  width: 200px;
   background-color: aqua;
   border: gray solid 3px;
 }
 
 .centerText {
   text-align: center;
+  font-size: 20pt;
 }
 
 .xBtn {

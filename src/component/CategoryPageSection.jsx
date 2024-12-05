@@ -15,7 +15,7 @@ export default function CategoryPageSection({title, subcategories, onSelect}) {
 
   return (
     <>
-     <h2>{title}</h2>
+     <h2 className='sectionTitle'>{title}</h2>
      <div className="categoryFlex">
       {subcategories.map((subCategory) => {
         if (subCategory.category === title) {
