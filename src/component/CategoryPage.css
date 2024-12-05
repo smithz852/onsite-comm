@@ -1,5 +1,6 @@
 .categoryPageTitle {
   padding: 2%;
+  font-size: 40pt;
 }
 
 .placeLeft {
@@ -7,12 +8,17 @@
 }
 
 .categoryPad {
-  padding: 5%;
+  padding: 1%;
+}
+
+.sectionContainer {
+  padding-left: 15%;
+  padding-right: 5%;
 }
 
 .categoryFlex {
   display: flex;
-  gap: 3%;
+  gap: 5%;
 }
 
 .tile {
