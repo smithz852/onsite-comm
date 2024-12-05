@@ -19,7 +19,8 @@
   background: white;
   border-radius: 8px;
   padding: 20px;
-  width: 400px;
+  width: 650px;
+  /* height: 900px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   text-align: center;
@@ -35,6 +36,11 @@
 .modal-flex {
   display: flex;
   justify-content: space-between;
+}
+
+.input-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .postDeleteBtn {

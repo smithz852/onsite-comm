@@ -43,7 +43,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
           <h2 className="modal-sub-header">{subcategory}</h2>
           <div className="modal-input-container">
             <form onSubmit={handleSubmit}>
-              <div>
+              <div className="input-flex">
+                
                 <FormInput
                   id="post-title"
                   label="Post Title"
@@ -51,13 +52,14 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="post-title"
                   
                 />
+               
                 <FormInput
                   id="post-descr"
                   label="Post Description"
                   inputType="text"
                   name="post-descr"
-                  
                 />
+                
               </div>
               <div>
                 <FormInput
