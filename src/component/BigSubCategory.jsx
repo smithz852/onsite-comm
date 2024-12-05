@@ -3,7 +3,7 @@ import FormModal from './FormModal'
 import { useContext } from 'react';
 import { FetchContext } from '../store/fetch-context';
 import './CategoryPage.css'
-import  communications from '../photos/communications-photo.jpg'
+import communications from '../photos/communications-photo.jpg'
 
 export default function BigSubCategory({ categoryInfo, xClick }) {
 
