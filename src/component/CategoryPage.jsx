@@ -37,7 +37,7 @@ export default function CategoryPage() {
   return (
     <>
     <div className='flex'>
-    <h1 className="categoryPageTitle">Categories</h1>
+    {!bigDisplay && <h1 className="categoryPageTitle">Categories</h1>}
     {bigDisplay && <BigSubCategory categoryInfo={bigDisplay} xClick={handleXclick}/>}
     </div>
     <div className='sectionContainer'>
