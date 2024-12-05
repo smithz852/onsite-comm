@@ -1,3 +1,13 @@
+img {
+  margin: 0;
+  width: 95%;
+  padding: 2.5%;
+}
+
+p {
+  margin: 0;
+}
+
 .categoryPageTitle {
   padding: 2%;
   font-size: 40pt;
@@ -47,7 +57,7 @@
 
 .xBtn {
   text-align: end;
-  margin: 2%;
+  margin: 1%;
 }
 
 .xFont {
@@ -67,7 +77,7 @@
 
 .bigDisplayDescr {
   font-size: 20pt;
-  padding: 3%;
+  padding: 1%;
 }
 
 .bigDisplayBtns {
@@ -79,5 +89,6 @@
 .bigDisplayContainer {
   background-color: aqua;
   border: solid gray 3px;
-  margin: 5%;
+  margin: 1%;
+  /* padding: 5%; */
 }
