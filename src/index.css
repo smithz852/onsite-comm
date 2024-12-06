@@ -2,6 +2,10 @@
   color: rgb(20, 8, 14);
 }
 
+body {
+  background-image: linear-gradient(to right, rgb(92, 83, 70), rgb(166, 159, 152)); 
+}
+
 .flex {
   display: flex;
   flex-direction: column;
