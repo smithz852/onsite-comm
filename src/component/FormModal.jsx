@@ -43,7 +43,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
           <h2 className="modal-sub-header">{subcategory}</h2>
           <div className="modal-input-container">
             <form onSubmit={handleSubmit}>
-              <div>
+              <div className="input-flex">
+                
                 <FormInput
                   id="post-title"
                   label="Post Title"
@@ -51,15 +52,17 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="post-title"
                   
                 />
+               
                 <FormInput
                   id="post-descr"
                   label="Post Description"
                   inputType="text"
                   name="post-descr"
-                  
                 />
+                
               </div>
-              <div>
+              <div className="checkboxFlex">
+                <div>
                 <FormInput
                   id="hobbiest"
                   label="Hobbiest"
@@ -67,6 +70,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="acquisition"
                   value="hobbiest"
                 />
+                </div>
+                <div>
                 <FormInput
                   id="professional"
                   label="Professional"
@@ -74,6 +79,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="acquisition"
                   value="professional"
                 />
+                </div>
+                <div>
                 <FormInput
                   id="amateur"
                   label="Amateur"
@@ -81,6 +88,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="acquisition"
                   value="amateur"
                 />
+                </div>
+                <div>
                 <FormInput
                   id="diy-enthusiast"
                   label="DIT Enthusiast"
@@ -88,6 +97,7 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="acquisition"
                   value="diy-enthusiast"
                 />
+                </div>
               </div>
               <div className="modal-footer">
                 <button onClick={handleClose} className="modal-button">

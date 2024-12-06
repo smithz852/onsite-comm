@@ -3,6 +3,7 @@ import FormModal from './FormModal'
 import { useContext } from 'react';
 import { FetchContext } from '../store/fetch-context';
 import './CategoryPage.css'
+import communications from '../photos/communications-photo.jpg'
 
 export default function BigSubCategory({ categoryInfo, xClick }) {
 
@@ -17,12 +18,14 @@ function handleClick() {
     <>
     {showModal && <FormModal onClose={handleModal} subcategory={categoryInfo.selectedCategory} category={categoryInfo.category}/>}
     <div className='bigDisplayContainer'>
+      
       <div className='xBtn'>
-        <button onClick={handleClick}><span className='xFont'>X</span></button>
+        <span className='xFont' onClick={handleClick}>X</span>
       </div>
       <section className='bigDisplayHeader'>
       <p>{categoryInfo.selectedCategory}</p>
       </section>
+      <img src={communications} />
       <section className='bigDisplayDescr'>
       <p>{categoryInfo.description}</p>
       </section>

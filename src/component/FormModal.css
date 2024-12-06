@@ -1,3 +1,13 @@
+textarea {
+  margin-bottom: 3%;
+  font-size: 15pt;
+  border: rgb(20, 8, 14) solid 2px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+input:hover {
+  cursor: pointer;
+}
 
 /* Overlay for modal background */
 .modal-overlay {
@@ -19,7 +29,8 @@
   background: white;
   border-radius: 8px;
   padding: 20px;
-  width: 400px;
+  width: 650px;
+  /* height: 900px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   text-align: center;
@@ -35,6 +46,11 @@
 .modal-flex {
   display: flex;
   justify-content: space-between;
+}
+
+.input-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .postDeleteBtn {
@@ -76,6 +92,7 @@
 
 /* Button styles */
 .modal-button {
+  margin-top: 2%;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -86,4 +103,10 @@
 
 .modal-button:hover {
   background-color: #0056b3;
+}
+
+.checkboxFlex {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
 }
