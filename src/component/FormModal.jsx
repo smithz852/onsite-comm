@@ -61,7 +61,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
                 />
                 
               </div>
-              <div>
+              <div className="checkboxFlex">
+                <div>
                 <FormInput
                   id="hobbiest"
                   label="Hobbiest"
@@ -69,6 +70,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="acquisition"
                   value="hobbiest"
                 />
+                </div>
+                <div>
                 <FormInput
                   id="professional"
                   label="Professional"
@@ -76,6 +79,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="acquisition"
                   value="professional"
                 />
+                </div>
+                <div>
                 <FormInput
                   id="amateur"
                   label="Amateur"
@@ -83,6 +88,8 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="acquisition"
                   value="amateur"
                 />
+                </div>
+                <div>
                 <FormInput
                   id="diy-enthusiast"
                   label="DIT Enthusiast"
@@ -90,6 +97,7 @@ const [addPost, { error }] = useMutation(ADD_POST);
                   name="acquisition"
                   value="diy-enthusiast"
                 />
+                </div>
               </div>
               <div className="modal-footer">
                 <button onClick={handleClose} className="modal-button">
