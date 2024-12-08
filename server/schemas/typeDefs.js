@@ -9,6 +9,7 @@ type SubCategories {
  subCategory: String
  description: String
  category: String
+ imgURL: String
 }
 
 type Post {

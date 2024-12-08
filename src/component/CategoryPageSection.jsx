@@ -19,7 +19,7 @@ export default function CategoryPageSection({title, subcategories, onSelect}) {
      <div className="categoryFlex">
       {subcategories.map((subCategory) => {
         if (subCategory.category === title) {
-          return <CategoryTile subCategory={subCategory.subCategory} key={subCategory._id} onSelect={tileClick}/>
+          return <CategoryTile subCategory={subCategory.subCategory} key={subCategory._id} categoryImg={subCategory.imgURL} onSelect={tileClick}/>
         }
       } 
       )}

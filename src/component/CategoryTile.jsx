@@ -1,7 +1,9 @@
 import './CategoryPage.css'
 import communications from '../photos/communications-photo.jpg'
 
-export default function CategoryTile({subCategory, onSelect}) {
+export default function CategoryTile({subCategory, onSelect, categoryImg}) {
+
+  console.log(categoryImg)
  
 function handleClick(subCategory) {
   onSelect(subCategory)
@@ -11,7 +13,7 @@ function handleClick(subCategory) {
     <>
         <div className="tile" onClick={() => handleClick(subCategory)} style={
           { 
-            backgroundImage: `url(${communications})`,
+            backgroundImage: `url(${categoryImg})`,
             backgroundSize: '100%' 
           }
           }>
