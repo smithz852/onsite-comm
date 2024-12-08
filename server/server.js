@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/OnsiteCom
     useUnifiedTopology: true,
 });
 
-const db = mongoose.connection;
+export const db = mongoose.connection;
 
 db.on('error', (err) => {
     console.error('MongoDB connection error:', err);

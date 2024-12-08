@@ -2,41 +2,49 @@
   {
     "subCategory": "Communications",
     "description": "Phone and server setups for homes and buisinesses",
-    "category": "Construction"
+    "category": "Construction",
+    "imgURL": "https://drive.google.com/file/d/19m4vH8aRvUPBI-vQ6B4FtTUiP2ik0Lqy/view?usp=drive_link"
   },
   {
     "subCategory": "Plumbing",
     "description": "Bathroom, kitchen, and general waterflow for homes",
-    "category": "Construction"
+    "category": "Construction",
+    "imgURL": "https://drive.google.com/file/d/1u-oUerNKz3r-t8iP0zKH0JQ7c5_bPWss/view?usp=drive_link"
   },
   {
     "subCategory": "Electrician",
     "description": "Home, lighting, power needs, and general wiring",
-    "category": "Construction"
+    "category": "Construction",
+    "imgURL": "https://drive.google.com/file/d/1TMpyNAIh6PNNaVz_lkJd0Y1JBfkRLwgP/view?usp=drive_link"
   },
   {
     "subCategory": "Carpentry",
     "description": "Home woodwork and light construction for home improvments",
-    "category": "Construction"
+    "category": "Construction",
+    "imgURL": "https://drive.google.com/file/d/1BAdofX9A7M2hFqiCUYwbCQaL3PM5ZG2H/view?usp=drive_link"
   },
   {
     "subCategory": "Tires",
     "description": "General work with patches or tire replacments",
-    "category": "Automotive"
+    "category": "Automotive",
+    "imgURL": "https://drive.google.com/file/d/1sv-cASfxYsYSV1GROTNrGSwkwlW1cHpx/view?usp=drive_link"
   },
   {
     "subCategory": "Brakes",
     "description": "Vehicle brake work and tips for repairs",
-    "category": "Automotive"
+    "category": "Automotive",
+    "imgURL": "https://drive.google.com/file/d/1IwL9XOC42USvgO605XM3yiW7Que_rZz_/view?usp=drive_link"
   },
   {
     "subCategory": "Suspension",
     "description": "Vehcile suspention practices and projects",
-    "category": "Automotive"
+    "category": "Automotive",
+    "imgURL": "https://drive.google.com/file/d/1YbbPQX4JtQHlgZl_ioVrgfqIdbNW5acW/view?usp=drive_link"
   },
   {
     "subCategory": "Shocks",
     "description": "Shocks and strut work, recommendations, and best practices",
-    "category": "Automotive"
+    "category": "Automotive",
+    "imgURL": "https://drive.google.com/file/d/1xYuBVcuqHJgf4I3nmQiSV0ZH61n16hWb/view?usp=drive_link"
   }
 ]

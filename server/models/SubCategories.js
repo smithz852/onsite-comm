@@ -14,6 +14,10 @@ const subCategoriesSchema = new Schema({
     type: Schema.Types.String,
     ref: 'Categories',
     required: true
+  },
+  imgURL: {
+    type: String,
+    required: true
   }
 })
 
