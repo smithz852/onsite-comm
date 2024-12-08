@@ -23,7 +23,8 @@ export default function CategoryPage() {
         setBigDisplay({
           selectedCategory: subCateogry,
           description: el.description,
-          category: el.category
+          category: el.category,
+          imgURL: el.imgURL
         })
       }
     })

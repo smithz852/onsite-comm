@@ -25,7 +25,7 @@ function handleClick() {
       <section className='bigDisplayHeader'>
       <p>{categoryInfo.selectedCategory}</p>
       </section>
-      <img src={communications} />
+      <img src={categoryInfo.imgURL} />
       <section className='bigDisplayDescr'>
       <p>{categoryInfo.description}</p>
       </section>

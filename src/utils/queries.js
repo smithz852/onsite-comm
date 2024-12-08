@@ -15,6 +15,7 @@ export const QUERY_SUBCATEGORIES = gql`
     subCategory
     description
     category
+    imgURL
   }
  }
 `
